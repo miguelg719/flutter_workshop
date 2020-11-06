@@ -99,17 +99,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ];
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -232,37 +221,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 // center the children vertically; the main axis here is the vertical
                 // axis because Columns are vertical (the cross axis would be
                 // horizontal).
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Wanna Like my Page?",
+                    "Github:",
                     textScaleFactor: 1.5,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Text(
-                    'You have liked my page this many times:',
-                  ),
-                  Text(
-                    '$_counter',
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
                 ],
               ),
             ],
           ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        backgroundColor: Colors.red[400],
-        tooltip: 'Increment',
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
