@@ -2,4 +2,5 @@
 
 An introduction to Flutter by creating a simple portfolio app that our members can personalize. 
 
-##Steps
+## Steps
+
