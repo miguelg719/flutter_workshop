@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -181,12 +183,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       RaisedButton(
                         shape: StadiumBorder(),
-                        child: Text("Resume"),
+                        child: Text('Resume'),
                         color: Colors.red,
-                        onPressed: () {
-                          //html.window.open(
-                          //    "https://google-developers.appspot.com/community/experts/directory/profile/profile-pawan_kumarGDE");
-                        },
+                        onPressed: (){},
                         padding: EdgeInsets.all(8),
                       ),
                       OutlineButton(
@@ -196,16 +195,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         shape: StadiumBorder(),
                         child: Text("Say Hi!"),
                         color: Colors.red,
-                        onPressed: () {
-                          //html.window.open("https://pawan.live", "Pk");
-                        },
+                        onPressed: (){},
                         padding: EdgeInsets.all(8),
                       )
                     ],
                   )
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 40),
               Column(
                 // Column is also a layout widget. It takes a list of children and
                 // arranges them vertically. By default, it sizes itself to fit its
@@ -223,13 +220,54 @@ class _MyHomePageState extends State<MyHomePage> {
                 // horizontal).
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Github:",
-                    textScaleFactor: 1.5,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        "LinkedIn: ",
+                        textScaleFactor: 1.25,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      InkWell(
+                        child: Text(
+                          'gonzalezfernandezmiguel',
+                          textScaleFactor: 1.25,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                        onTap: () => launch('https://linkedin.com/in/gonzalezfernandezmiguel')
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        "Github: ",
+                        textScaleFactor: 1.25,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      InkWell(
+                          child: Text(
+                            'miguelg719',
+                            textScaleFactor: 1.25,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                          onTap: () => launch('https://github.com/miguelg719')
+                      ),
+                    ],
                   ),
                 ],
               ),
